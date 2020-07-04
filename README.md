@@ -8,16 +8,30 @@ Node.js
 
 ## Installation
 
+Clone the repository.
+
 ```bash
 git clone https://github.com/sameep-sehgal/DreamStream
+```
+
+Install all the dependencies for react app.
+
+```bash
 npm install
+```
+
+Install all the dependencies for RTMP server and JSON server.
+
+```bash
 cd apis
 npm install
 cd ../RTMPServer
-npm start
+npm install
 ```
 
 ## Usage
+
+Start all the servers
 
 ```bash
 npm start
