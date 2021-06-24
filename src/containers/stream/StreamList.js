@@ -31,27 +31,30 @@ class StreamList extends React.Component {
 
     renderList = () => {
         return this.props.streams.map(stream => {
-            return (
-                <div className='item' key={stream.id}>
-                    {this.renderAdminButtons(stream.userEmail, stream.id)}
-                    <i className='large middle aligned icon camera' />
-                    <div className='content'>
-                        <Link to={`/stream/${stream.id}`}>{stream.title}</Link>
-                        <div className='description'>
-                            {stream.description}
+            if(stream.id){
+                return (
+                    <div className='item' key={stream.id}>
+                        {this.renderAdminButtons(stream.userEmail, stream.id)}
+                        <i className='large middle aligned icon camera' />
+                        <div className='content'>
+                            <Link to={`/stream/${stream.id}`}>{stream.title}</Link>
+                            <div className='description'>
+                                {stream.description}
+                                <div><strong>Owner: {stream.userEmail}</strong> </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            )
+                )
+            }
         })
     }
 
     renderCreateButton = () => {
         if (this.props.isSignedIn) {
             return (
-                <div style={{ textAlign: 'right' }}>
-                    <Link to='/stream/new' className='ui button primary'>
-                        Create Stream
+                <div style={{ textAlign: 'center' }}>
+                    <Link to='/stream/new' className='ui button secondary center'>
+                        Create New Stream
                     </Link>
                 </div>
             )
@@ -61,7 +64,7 @@ class StreamList extends React.Component {
     render() {
         return (
             <div>
-                <h2>Streams</h2>
+                <h2 style={{ textAlign: 'center' }}>All Streams</h2>
                 <div className='ui celled list'>
                     {this.renderList()}
                     {this.renderCreateButton()}

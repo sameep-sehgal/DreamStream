@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import GoogleAuth from './GoogleAuth';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div className='ui secondary pointing menu'>
             <Link to='/' className='item'>
-                DreamStream
+                <p style={{fontFamily:'verdana',color:'#B71C1C'}}><strong>DreamStream</strong></p>
             </Link>
             <div className='right menu'>
                 <Link to='/' className='item'>
-                    All Streams
+                    {props.userEmail}
                 </Link>
                 <GoogleAuth />
             </div>
@@ -19,4 +20,10 @@ const Header = () => {
     )
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+    return {
+        userEmail: state.auth.userEmail,
+    };
+}
+
+export default connect(mapStateToProps)(Header);
