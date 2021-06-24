@@ -15,11 +15,11 @@ const App = () => {
             <Router history={history}>
                 <Header />
                 <Switch>
-                    <Route path='/' exact component={StreamList} />
-                    <Route path='/stream/new' exact component={StreamCreate} />
-                    <Route path='/stream/edit/:id' exact component={StreamEdit} />
-                    <Route path='/stream/delete/:id' exact component={StreamDelete} />
-                    <Route path='/stream/:id' exact component={StreamShow} />
+                    <Route path='/DreamStream' exact component={StreamList} />
+                    <Route path='/DreamStream/stream/new' exact component={StreamCreate} />
+                    <Route path='/DreamStream/stream/edit/:id' exact component={StreamEdit} />
+                    <Route path='/DreamStream/stream/delete/:id' exact component={StreamDelete} />
+                    <Route path='/DreamStream/stream/:id' exact component={StreamShow} />
                 </Switch>
             </Router>
         </div>

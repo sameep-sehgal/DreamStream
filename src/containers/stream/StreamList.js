@@ -14,13 +14,13 @@ class StreamList extends React.Component {
                 <div className='right floated content'>
                     <Link
                         className='ui button primary'
-                        to={`/stream/edit/${streamId}`}
+                        to={`/DreamStream/stream/edit/${streamId}`}
                     >
                         Edit
                     </Link>
                     <Link
                         className='ui button negative'
-                        to={`stream/delete/${streamId}`}
+                        to={`/DreamStream/stream/delete/${streamId}`}
                     >
                         Delete
                     </Link>
@@ -37,7 +37,7 @@ class StreamList extends React.Component {
                         {this.renderAdminButtons(stream.userEmail, stream.id)}
                         <i className='large middle aligned icon camera' />
                         <div className='content'>
-                            <Link to={`/stream/${stream.id}`}>{stream.title}</Link>
+                            <Link to={`/DreamStream/stream/${stream.id}`}>{stream.title}</Link>
                             <div className='description'>
                                 {stream.description}
                                 <div><strong>Owner: {stream.userEmail}</strong> </div>
@@ -53,7 +53,7 @@ class StreamList extends React.Component {
         if (this.props.isSignedIn) {
             return (
                 <div style={{ textAlign: 'center' }}>
-                    <Link to='/stream/new' className='ui button secondary center'>
+                    <Link to='/DreamStream/stream/new' className='ui button secondary center'>
                         Create New Stream
                     </Link>
                 </div>

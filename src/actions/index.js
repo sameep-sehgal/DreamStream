@@ -27,7 +27,7 @@ export const createStream = formData => async (dispatch, getState) => {
     const response = await streams.post('/streams', { ...formData, userEmail })
 
     dispatch({ type: CREATE_STREAM, payload: response.data })
-    history.push('/');
+    history.push('/DreamStream');
 }
 
 export const fetchStreams = () => async (dispatch) => {
@@ -45,12 +45,12 @@ export const deleteStream = id => async dispatch => {
     await streams.delete(`streams/${id}`);
 
     dispatch({ type: DELETE_STREAM, payload: id })
-    history.push('/')
+    history.push('/DreamStream')
 }
 
 export const editStream = (id, formData) => async dispatch => {
     const response = await streams.patch(`streams/${id}`, formData)
 
     dispatch({ type: EDIT_STREAM, payload: response });
-    history.push('/')
+    history.push('/DreamStream')
 }
