@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e84c7da6f3b32ac9bbebe02734a2e2f",
+    "revision": "595e4f0e54bddc8dee0bde32b85acf56",
     "url": "/DreamStream/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DreamStream/static/js/2.eb7ee4ce.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5ca9b053fb26ab3f4810",
-    "url": "/DreamStream/static/js/main.e533c347.chunk.js"
+    "revision": "19b89d0d3b677d76ccae",
+    "url": "/DreamStream/static/js/main.4c0d8cf4.chunk.js"
   },
   {
     "revision": "2558af27a6d4c2af9818",
