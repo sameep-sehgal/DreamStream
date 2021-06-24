@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/DreamStream/precache-manifest.bc5830b54abe3716697e8e64323b5180.js"
+  "/DreamStream/precache-manifest.2454008690f0cb7cc3bfa83451006c10.js"
 );
 
 self.addEventListener('message', (event) => {
